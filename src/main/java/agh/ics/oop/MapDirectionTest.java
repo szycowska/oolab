@@ -1,32 +1,37 @@
+package agh.ics.oop;
 import agh.ics.oop.MapDirection;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Assertions;
 
 public class MapDirectionTest {
+
+//Zaimplementuj test weryfikujący poprawność działania metody next(),
+// dla wszystkich przypadków (dodaj anotację @Test przed deklaracją metody).
     @Test
     public void next(){
-        MapDirection nextDirection = MapDirection.EAST.next();
-        assertEquals(nextDirection,MapDirection.SOUTH);
-        nextDirection = nextDirection.next();
-        assertEquals(nextDirection,MapDirection.WEST);
-        nextDirection = nextDirection.next();
-        assertEquals(nextDirection,MapDirection.NORTH);
-        nextDirection = nextDirection.next();
-        assertEquals(nextDirection,MapDirection.EAST);
+        MapDirection next_Direction = MapDirection.EAST.next();
+        Assertions.assertEquals(next_Direction,MapDirection.SOUTH);
+        next_Direction = next_Direction.next();
+        Assertions.assertEquals(next_Direction,MapDirection.WEST);
+        next_Direction = next_Direction.next();
+        Assertions.assertEquals(next_Direction,MapDirection.NORTH);
+        next_Direction = next_Direction.next();
+        Assertions.assertEquals(next_Direction,MapDirection.EAST);
 
     }
+//Zaimplementuj test weryfikujący poprawność działania metody previous(),
+// dla wszystkich przypadków.
     @Test
     public void previous(){
 
-        MapDirection nextDirection =  MapDirection.EAST.previous();
-        assertEquals(nextDirection,MapDirection.NORTH);
-        nextDirection = nextDirection.previous();
-        assertEquals(nextDirection,MapDirection.WEST);
-        nextDirection = nextDirection.previous();
-        assertEquals(nextDirection,MapDirection.SOUTH);
-        nextDirection = nextDirection.previous();
-        assertEquals(nextDirection,MapDirection.EAST);
+        MapDirection previous_Direction =  MapDirection.EAST.previous();
+        Assertions.assertEquals(previous_Direction,MapDirection.NORTH);
+        previous_Direction = previous_Direction.previous();
+        Assertions.assertEquals(previous_Direction,MapDirection.WEST);
+        previous_Direction = previous_Direction.previous();
+        Assertions.assertEquals(previous_Direction,MapDirection.SOUTH);
+        previous_Direction = previous_Direction.previous();
+        Assertions.assertEquals(previous_Direction,MapDirection.EAST);
 
     }
 
