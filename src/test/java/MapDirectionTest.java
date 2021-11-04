@@ -1,11 +1,10 @@
-package agh.ics.oop;
 import agh.ics.oop.MapDirection;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 public class MapDirectionTest {
 
-//Zaimplementuj test weryfikujący poprawność działania metody next(),
+    //Zaimplementuj test weryfikujący poprawność działania metody next(),
 // dla wszystkich przypadków (dodaj anotację @Test przed deklaracją metody).
     @Test
     public void next(){
@@ -19,7 +18,7 @@ public class MapDirectionTest {
         Assertions.assertEquals(next_Direction,MapDirection.EAST);
 
     }
-//Zaimplementuj test weryfikujący poprawność działania metody previous(),
+    //Zaimplementuj test weryfikujący poprawność działania metody previous(),
 // dla wszystkich przypadków.
     @Test
     public void previous(){

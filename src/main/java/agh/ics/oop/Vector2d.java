@@ -3,12 +3,6 @@ package agh.ics.oop;
 //posiada dwa publiczne pola x i y typu int, które nie mogą być
 // modyfikowane (final),
 public class Vector2d {
-    public static void main()
-    {Vector2d position1 = new Vector2d(1,2);
-        System.out.println(position1);
-        Vector2d position2 = new Vector2d(-2,1);
-        System.out.println(position2);
-        System.out.println(position1.add(position2));}
     public final int x;
     public final int y;
 
@@ -106,9 +100,16 @@ public class Vector2d {
     }
 //posiada metodę boolean equals(Object other) która zwraca
 // prawdę jeśli obie pozycje są sobie równe (zwróć uwagę na typ parametru),
-    public boolean equals(Vector2d other){
-        return x == other.x && y == other.y;
+    public boolean equals(Vector2d other) {
+            if (this == other)
+                return true;
+            if (!(other instanceof Vector2d))
+                return false;
+            Vector2d that = (Vector2d) other;
+            return this.x == that.x && this.y == that.y;
+
     }
+
 //posiada metodę Vector2d opposite(), która zwraca nowy obiekt tej klasy,
 // posiadający zmienione znaki obu składowych.
     public Vector2d opposite(){
